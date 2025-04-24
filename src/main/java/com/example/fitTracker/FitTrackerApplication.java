@@ -12,7 +12,7 @@ public class FitTrackerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FitTrackerApplication.class, args);
-		log.info("Application running sucessfuly!");
+		log.info("Application running successfully!");
 
 	}
 
