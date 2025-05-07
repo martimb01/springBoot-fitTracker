@@ -1,5 +1,6 @@
 package com.example.fitTracker.run;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -29,7 +30,7 @@ public class RunController {
         Optional<Run> run = runRepository.findById(id);
 
         if (run.isEmpty()) {
-           throw new  ResponseStatusException(HttpStatus.NOT_FOUND, "Run does not exist!");
+           throw new RunNotFoundException();
         }
         return run.get();
     }
@@ -37,7 +38,7 @@ public class RunController {
     // Create new run
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void create (@RequestBody Run run) {
+    void create (@Valid @RequestBody Run run) {
         runRepository.create(run);
     }
 
