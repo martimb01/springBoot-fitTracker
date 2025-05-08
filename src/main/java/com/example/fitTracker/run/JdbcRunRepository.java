@@ -17,7 +17,7 @@ public class JdbcRunRepository {
     private static final Logger log = LoggerFactory.getLogger(RunRepository.class);
     private final JdbcClient jdbcClient;
 
-    public RunRepository(JdbcClient jdbcClient) {
+    public JdbcRunRepository (JdbcClient jdbcClient) {
         this.jdbcClient = jdbcClient;
     }
 
