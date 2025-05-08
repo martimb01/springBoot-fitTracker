@@ -1,6 +1,4 @@
-package com.example.fitTracker;
-
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
+package com.example.fitTracker.user;
 
 public record User(
         Integer id,

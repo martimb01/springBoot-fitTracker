@@ -1,4 +1,4 @@
-package com.example.fitTracker;
+package com.example.fitTracker.user;
 
 public record Address(
         String street,
